@@ -2,6 +2,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const dragText = document.getElementById('drag-text');
     const imageContainer = document.getElementById('image-container');
     const image = imageContainer.querySelector('img');
+    const cloudinaryXElement = document.getElementById('cloudinary-x');
+    const cloudinaryYElement = document.getElementById('cloudinary-y');
 
     // Set default position of drag-text to the center of the image
     const imageWidth = image.offsetWidth;
@@ -51,7 +53,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         const cloudinaryX = clampedX - (imageWidth / 2);
         const cloudinaryY = clampedY - (imageHeight / 2);
 
-        console.log('Cloudinary X:', cloudinaryX);
-        console.log('Cloudinary Y:', cloudinaryY);
+        cloudinaryXElement.textContent = cloudinaryX.toFixed(2);
+        cloudinaryYElement.textContent = cloudinaryY.toFixed(2);
     }
 });

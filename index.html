@@ -15,12 +15,23 @@
             color: white;
             cursor: move;
         }
+        #cloudinary-coordinates {
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
     </style>
 </head>
 <body>
     <div id="image-container">
         <img src="https://res.cloudinary.com/x3l3/image/upload/l_text:Arial_50_bold:full_name,co_white,y_230,x_-460/chungnhan/chungnhan21_icklzq.jpg" alt="Image">
         <div id="drag-text">Drag Me</div>
+    </div>
+    <div id="cloudinary-coordinates">
+        Cloudinary X: <span id="cloudinary-x"></span><br>
+        Cloudinary Y: <span id="cloudinary-y"></span>
     </div>
 
     <script src="script.js"></script>
